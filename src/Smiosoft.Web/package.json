@@ -1,7 +1,7 @@
 {
   "name": "smiosoft.web",
   "version": "1.0.0",
-  "description": "",
+  "description": "Smiosoft website",
   "main": "ClientApp/index.jsx",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",

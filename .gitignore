@@ -338,3 +338,8 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+# React build outputs
+**/wwwroot/*
+!**/wwwroot/404.html
+!**/wwwroot/CNAME

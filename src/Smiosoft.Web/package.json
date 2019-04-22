@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "Smiosoft website",
   "main": "ClientApp/index.jsx",
+  "repository": "https://github.com/smiosoft/smiosoft.github.io",
+  "author": "Nick Smirnoff <nick.smirnoff@live.co.uk>",
+  "contributors": [
+    "Andi Elliott <ahzarkie@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "http://smiosoft.github.io",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",

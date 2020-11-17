@@ -8,8 +8,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.colours.splash_screen_background_colour};
-  color: ${({ theme }) => theme.colours.splash_screen_colour};
   user-select: none;
 `;
 

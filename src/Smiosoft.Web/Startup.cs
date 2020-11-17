@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Smiosoft.Web
@@ -8,18 +7,19 @@ namespace Smiosoft.Web
 	{
 		public void ConfigureServices(IServiceCollection services)
 		{
+			services.AddSpaStaticFiles(options =>
+			{
+				options.RootPath = "wwwroot";
+			});
 		}
 
-		public void Configure(IApplicationBuilder app)
+		public void Configure(IApplicationBuilder application)
 		{
-			app.UseRouting();
-
-			app.UseEndpoints(endpoints =>
+			application.UseStaticFiles();
+			application.UseSpaStaticFiles();
+			application.UseSpa(spa =>
 			{
-				endpoints.MapGet("/", async context =>
-				{
-					await context.Response.WriteAsync("Hello World!");
-				});
+				spa.Options.SourcePath = ".";
 			});
 		}
 	}

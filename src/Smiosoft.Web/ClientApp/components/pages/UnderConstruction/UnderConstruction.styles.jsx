@@ -21,11 +21,6 @@ const Logo = styled.div`
   & > img {
     margin: .5rem .5rem .25rem .5rem;
   }
-
-  & > h3 {
-    margin: .25rem .5rem .5rem .5rem;
-    text-transform: uppercase;
-  }
 `;
 
 const Status = styled.h2`

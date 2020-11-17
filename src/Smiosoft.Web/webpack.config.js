@@ -9,6 +9,9 @@ const { GenerateSW } = require('workbox-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = (env = {}) => {
+  if (!process.env.NODE_ENV) {
+    process.env.NODE_ENV = env.production ? 'production' : 'development';
+  }
   const isDevelopment = process.env.NODE_ENV !== 'production';
 
   return ({
@@ -22,8 +25,10 @@ module.exports = (env = {}) => {
     },
     resolve: {
       alias: {
+        '~assets': path.resolve(__dirname, 'ClientApp/assets/'),
         '~components': path.resolve(__dirname, 'ClientApp/components/'),
         '~redux': path.resolve(__dirname, 'ClientApp/redux/'),
+        '~style': path.resolve(__dirname, 'ClientApp/style/'),
         '~utils': path.resolve(__dirname, 'ClientApp/utils/'),
       },
       extensions: ['.js', '.jsx'],

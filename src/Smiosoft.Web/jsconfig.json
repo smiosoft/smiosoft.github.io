@@ -1,0 +1,16 @@
+{
+	"typeAcquisition": {
+		"include": []
+	},
+	"compilerOptions": {
+		"baseUrl": ".",
+		"jsx": "react",
+		"target": "es6",
+		"module": "commonjs",
+		"paths": {
+			"~components/*": ["ClientApp/components/*"],
+			"~redux/*": ["ClientApp/redux/*"],
+			"~utils/*": ["ClientApp/utils/*"],
+		}
+	},
+}

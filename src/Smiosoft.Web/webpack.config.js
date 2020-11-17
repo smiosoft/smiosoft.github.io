@@ -23,6 +23,7 @@ module.exports = (env = {}) => {
     resolve: {
       alias: {
         '~components': path.resolve(__dirname, 'ClientApp/components/'),
+        '~redux': path.resolve(__dirname, 'ClientApp/redux/'),
         '~utils': path.resolve(__dirname, 'ClientApp/utils/'),
       },
       extensions: ['.js', '.jsx'],
@@ -182,6 +183,6 @@ module.exports = (env = {}) => {
       }),
       new FriendlyErrorsWebpackPlugin(),
       isDevelopment && new ReactRefreshWebpackPlugin(),
-    ].filter(Boolean)
+    ].filter(Boolean),
   });
-}
+};

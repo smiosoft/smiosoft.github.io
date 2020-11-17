@@ -4,15 +4,18 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
 import store from './redux/store';
+import ThemeProvider from './style/ThemeProvider';
 import GlobalStyle from './style/GlobalStyle';
 import App from './App';
 
 const ELEMENT = (
   <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-    <GlobalStyle />
+    <ThemeProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+      <GlobalStyle />
+    </ThemeProvider>
   </Provider>
 );
 const MOUNT_NODE = document.getElementById('app');
